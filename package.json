@@ -1,0 +1,30 @@
+{
+  "name": "reveal-slides",
+  "version": "1.0.0",
+  "description": "A Reveal.js slides for redbrick",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "node_modules/gulp/bin/gulp.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/redbrick/reveal-slides.git"
+  },
+  "keywords": [
+    "reveal",
+    "Redbrick",
+    "theme"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/redbrick/reveal-slides/issues"
+  },
+  "homepage": "https://github.com/redbrick/reveal-slides#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2",
+    "reveal.js": "^3.3.0"
+  }
+}
