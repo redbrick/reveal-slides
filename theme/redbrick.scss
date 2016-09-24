@@ -35,6 +35,17 @@ section.has-dark-background {
   }
 }
 
+body::after {
+    color: #000;
+    content: attr(data-bg-text);
+    display: block;
+    font-size: 12px;
+    line-height: 1;
+    position: absolute;
+    bottom: 16px;
+    right: 8px;
+}
+
 // Theme template ------------------------------
 @import "../node_modules/reveal.js/css/theme/template/theme";
 // ---------------------------------------------
