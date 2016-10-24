@@ -1,0 +1,204 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>How To Redbrick</title>
+    <link rel="stylesheet" href="../node_modules/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../dist/redbrick.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="../node_modules/reveal.js/lib/css/zenburn.css">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? '../node_modules/reveal.js/css/print/pdf.css' : '../node_modules/reveal.js/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body data-bg-text="Pictures are being taken to be used on social media">
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown>
+		<script type='text/template'>
+                # How to Redbrick
+                RC Clients, Multiplexers, Web Hosting, Development
+		</script>
+        </section>
+        <section data-markdown>
+                <script type='text/template'>
+                ## Login
+                How to ssh
+                </script>
+                </section>
+        <section data-markdown>
+                <script type='text/template'>
+                ## Type this in your terminal
+                        ~$ ssh Username@pyg.redbrick.dcu.ie
+                </script>
+                </section>
+        <section data-markdown>
+                <script type='text/template'>
+                ![login screen](./images/MainHome.png)
+                </script>
+                </section>
+        <section data-markdown>
+        	<script type='text/template'>
+                ## Multiplexer
+                Tmux
+		</script>
+		</section>
+        <section data-markdown>
+                <script type='text/template'>
+                ### Tmux
+                - Lighter than screen (which <strike>is shit</strike> we don't use)
+                - Better plugins
+                - Scriptable
+                - To set it up
+                 - **~edu/setupTmux**
+                 - rebinds keys ctrl+b > ctrl+a    
+                 - makes it pretty 
+                </script>
+                </section>
+        <section data-markdown>
+                <script type='text/template'>
+                ### Auto Attach
+                - nano ~/.zlogin
+                        tmux attach -d
+                </script>
+                </section>
+        <section data-markdown>
+                <script type='text/template'>
+                ## IRC Clients
+                irssi or weechat 
+                </script>
+                </section>
+        <section data-markdown>
+                <script type='text/template'>
+                ### Weechat
+                - Alternative irc client
+                - Some advantages over irrsi
+                - Looks nicer
+                - Easier to install scripts
+                </script>
+                </section>
+        <section data-markdown>
+                <script type='text/template'>
+                ##### Need to compile it from source, but there's a script for that
+                        ~$ ~/edu/compileweechat
+                </script>
+                </section>        
+        <section data-markdown>
+                <script type='text/template'>
+                ##### We need to set our NICK for the server
+                       ~$ nano ~/.weechat/irc.conf
+                 - change “nicks” field to your username under the redbrick section
+                </script>
+                </section>
+        <section data-markdown>
+                <script type='text/template'>
+                #### Useful Commands
+                - /script
+                 - **iset.pl** - nice interface for changing settings
+                 - **buffers.py** - channel list
+                 - **screen_away.pl** - sets away status when you detach from screen
+                 - **cmdind.pl** -tells you is its command or message
+                 - **grep** - lets you grep in weechat
+                 - **pushover.pl** - notification center
+                - Remember to /save when you update settings
+                - And run /autojoin --run
+
+                </script>
+                </section>
+        <section data-markdown>
+                <script type='text/template'>
+                ### Weechat Mobile
+                - https://play.google.com/store/apps/details?id=com.ubergeek42.WeechatAndroid&hl=en
+                - /relay add weechat <port number>
+                - /set relay.network.password "your-secret-password"
+                </script>
+                </section>
+        <section data-markdown>
+                <script type='text/template'>
+                - now on the Phone launch the app and in settings In connection settings
+                 - **Relay host:** localhost
+                 - **Relay Port:** <port number>
+                 - **Relay password:** your-secret-password
+                 - **Connect type:** SSH tunnel
+                - then in SSH Tunnel settings
+                 - **SSH host:** redbrick.dcu.ie
+                 - **SSH username:** your username
+                 - **SSH port:** 22
+                </script>
+                </section>
+        <section data-markdown>
+                <script type='text/template'>
+                ## Webspace
+                - Open up the FTP Client (Winscp and filezilla)
+                - Login to 
+                 - Host:           sftp://redbrick.dcu.ie 
+                 - User:           RedbrickUsername 
+                 - Pass:           RedbrickPassword 
+                 - Port:           22 
+                </script>
+                </section>
+        <section data-markdown>
+                <script type='text/template'>
+                - Navigate to public_html/ 
+                - Drag and drop your file to upload or select from the filesystem
+                - SSH into the Redbrick 
+                - In your home directory (~) enter the following commands: 
+                 - chmod 711 public_html 
+                 - chmod 644 public_html/index.html
+                </script>
+                </section>
+        <section data-markdown>
+                <script type='text/template'>
+                ### Step One
+                - Create the RSA Key Pair
+                        ssh-keygen-t rsa
+                </script>
+                </section>
+        <section data-markdown>
+                <script type='text/template'>
+                ### Step Two
+                - Store keys and passphrase
+                        Enter file in which to save the key (/home/demo/.ssh/id_rsa):
+                - You can press enter here just to store in home
+                        Enter passphrase (empty for no passphrase):
+                - Set a passphrase 
+                - It's up to you whether you want to use a passphrase.
+                </script>
+                </section>
+        <section data-markdown>
+                <script type='text/template'>
+                ### Step three
+                - Copy the public key            
+                        ssh-copy-id user@123.45.56.78      
+                </script>
+                </section>
+        <section data-markdown>
+                <script type='text/template'>
+                ## Questions?
+                </script>
+                </section>
+
+      </div>
+    </div>
+    <script src="../node_modules/reveal.js/js/reveal.js"></script>
+    <script src="../node_modules/reveal.js/lib/js/head.min.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: false,
+        mouseWheel: true,
+        dependencies: [
+          { src: '../node_modules/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../node_modules/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../node_modules/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../node_modules/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '../node_modules/reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: '../node_modules/reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+  </body>
+</html>
