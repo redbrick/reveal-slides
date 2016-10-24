@@ -32,8 +32,15 @@
                 </section>
         <section data-markdown>
                 <script type='text/template'>
+                Does anyone need a redbrick login or password?
+                </script>
+                </section>
+
+        <section data-markdown>
+                <script type='text/template'>
                 ## Type this in your terminal
-                        ~$ ssh Username@pyg.redbrick.dcu.ie
+                <pre><code>   ~$ ssh grace@redbrick.dcu.ie </code></pre> 
+                - Your password won't show up for those damn screenlookers
                 </script>
                 </section>
         <section data-markdown>
@@ -46,24 +53,28 @@
                 ## Multiplexer
                 Tmux
 		</script>
-		</section>
+		</section> <section data-markdown>
+                <script type='text/template'>
+                A terminal multiplexer is used so that you can have multiple terminals open but in the one terminal window
+                </script>
+                </section>
+
         <section data-markdown>
                 <script type='text/template'>
                 ### Tmux
                 - Lighter than screen (which <strike>is shit</strike> we don't use)
                 - Better plugins
                 - Scriptable
-                - To set it up
-                 - **~edu/setupTmux**
-                 - rebinds keys ctrl+b > ctrl+a    
-                 - makes it pretty 
+                - Already setup, just type 
+                  <pre><code> ~$ tmux </code></pre> 
+                 to get it going
                 </script>
                 </section>
         <section data-markdown>
                 <script type='text/template'>
                 ### Auto Attach
                 - nano ~/.zlogin
-                        tmux attach -d
+                <pre><code> tmux attach -d </code></pre>
                 </script>
                 </section>
         <section data-markdown>
@@ -75,25 +86,17 @@
         <section data-markdown>
                 <script type='text/template'>
                 ### Weechat
-                - Alternative irc client
+                - Command Line irc client
                 - Some advantages over irrsi
                 - Looks nicer
                 - Easier to install scripts
+                - alternatives include irssi
                 </script>
                 </section>
-        <section data-markdown>
-                <script type='text/template'>
-                ##### Need to compile it from source, but there's a script for that
-                        ~$ ~/edu/compileweechat
-                </script>
-                </section>        
-        <section data-markdown>
-                <script type='text/template'>
-                ##### We need to set our NICK for the server
-                       ~$ nano ~/.weechat/irc.conf
-                 - change “nicks” field to your username under the redbrick section
-                </script>
-                </section>
+
+                
+                
+            </section>
         <section data-markdown>
                 <script type='text/template'>
                 #### Useful Commands
@@ -107,73 +110,54 @@
                 - Remember to /save when you update settings
                 - And run /autojoin --run
 
-                </script>
-                </section>
-        <section data-markdown>
-                <script type='text/template'>
-                ### Weechat Mobile
-                - https://play.google.com/store/apps/details?id=com.ubergeek42.WeechatAndroid&hl=en
-                - /relay add weechat <port number>
-                - /set relay.network.password "your-secret-password"
-                </script>
-                </section>
-        <section data-markdown>
-                <script type='text/template'>
-                - now on the Phone launch the app and in settings In connection settings
-                 - **Relay host:** localhost
-                 - **Relay Port:** <port number>
-                 - **Relay password:** your-secret-password
-                 - **Connect type:** SSH tunnel
-                - then in SSH Tunnel settings
-                 - **SSH host:** redbrick.dcu.ie
-                 - **SSH username:** your username
-                 - **SSH port:** 22
-                </script>
-                </section>
-        <section data-markdown>
-                <script type='text/template'>
-                ## Webspace
-                - Open up the FTP Client (Winscp and filezilla)
-                - Login to 
-                 - Host:           sftp://redbrick.dcu.ie 
-                 - User:           RedbrickUsername 
-                 - Pass:           RedbrickPassword 
-                 - Port:           22 
-                </script>
-                </section>
-        <section data-markdown>
-                <script type='text/template'>
-                - Navigate to public_html/ 
-                - Drag and drop your file to upload or select from the filesystem
-                - SSH into the Redbrick 
-                - In your home directory (~) enter the following commands: 
-                 - chmod 711 public_html 
-                 - chmod 644 public_html/index.html
-                </script>
-                </section>
-        <section data-markdown>
-                <script type='text/template'>
-                ### Step One
-                - Create the RSA Key Pair
-                        ssh-keygen-t rsa
-                </script>
-                </section>
-        <section data-markdown>
-                <script type='text/template'>
-                ### Step Two
-                - Store keys and passphrase
-                        Enter file in which to save the key (/home/demo/.ssh/id_rsa):
-                - You can press enter here just to store in home
-                        Enter passphrase (empty for no passphrase):
-                - Set a passphrase 
-                - It's up to you whether you want to use a passphrase.
+            </script>
+            </section>
+    <section data-markdown>
+            <script type='text/template'>
+            ## Webspace
+            - Open up the FTP Client (Winscp and filezilla)
+            - Login to 
+             - Host:           sftp://redbrick.dcu.ie 
+             - User:           RedbrickUsername 
+             - Pass:           RedbrickPassword 
+             - Port:           22 
+            </script>
+            </section>
+    <section data-markdown>
+            <script type='text/template'>
+            - Navigate to public_html/ (it's in your home directory) 
+            - Drag and drop your file to upload or select from the filesystem
+            - SSH into the Redbrick 
+            - In your home directory (~) enter the following commands: 
+             <pre><code> chmod 711 public_html </code></pre>
+             -You would have to create this file first
+             <pre><code> chmod 644 public_html/index.html </code></pre>
+             This sets permissions for the folder and file
+            </script>
+            </section>
+    <section data-markdown>
+            <script type='text/template'>
+            ### Step One
+            - Create the RSA Key Pair
+            <pre><code> -keygen-t rsa </code></pre>
+            </script>
+            </section>
+    <section data-markdown>
+            <script type='text/template'>
+            ### Step Two
+            - Store keys and passphrase
+                    Enter file in which to save the key (/home/demo/.ssh/id_rsa):
+            - You can press enter here just to store in home
+                    Enter passphrase (empty for no passphrase):
+            - Set a passphrase 
+            - It's up to you whether you want to use a passphrase.
                 </script>
                 </section>
         <section data-markdown>
                 <script type='text/template'>
                 ### Step three
                 - Copy the public key            
-                        ssh-copy-id user@123.45.56.78      
+                <pre><code> ssh-copy-id grace@124.45.56.78 </code></pre> 
                 </script>
                 </section>
         <section data-markdown>
