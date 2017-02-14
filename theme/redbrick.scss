@@ -1,4 +1,5 @@
 // Default mixins and settings -----------------
+@import "../node_modules/reveal.js/css/reveal.scss";
 @import "../node_modules/reveal.js/css/theme/template/mixins";
 @import "../node_modules/reveal.js/css/theme/template/settings";
 // ---------------------------------------------
@@ -7,7 +8,7 @@
 $backgroundColor: #fff;
 // Background generator
 @mixin bodyBackground() {
-    background: url(images/redbrick.png) bottom 32px left 32px/256px no-repeat, linear-gradient(to bottom, #f0ebe7 20px, #f0ebe7 100%);
+    background: url(../images/redbrick.png) bottom 32px left 32px/256px no-repeat, linear-gradient(to bottom, #f0ebe7 20px, #f0ebe7 100%);
 }
 
 $mainColor: #000;
@@ -48,4 +49,5 @@ body::after {
 
 // Theme template ------------------------------
 @import "../node_modules/reveal.js/css/theme/template/theme";
+@import "../node_modules/reveal.js/lib/css/zenburn";
 // ---------------------------------------------

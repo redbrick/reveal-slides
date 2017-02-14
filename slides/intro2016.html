@@ -2,16 +2,13 @@
   <head>
     <meta charset="utf-8">
     <title>Intro To Redbrick 2016</title>
-    <link rel="stylesheet" href="../node_modules/reveal.js/css/reveal.css">
-    <link rel="stylesheet" href="../dist/redbrick.css">
-    <!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="../node_modules/reveal.js/lib/css/zenburn.css">
+    <link rel="stylesheet" href="../dist/css/redbrick.css">
     <!-- Printing and PDF exports -->
     <script>
       var link = document.createElement( 'link' );
       link.rel = 'stylesheet';
       link.type = 'text/css';
-      link.href = window.location.search.match( /print-pdf/gi ) ? '../node_modules/reveal.js/css/print/pdf.css' : '../node_modules/reveal.js/css/print/paper.css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? '../dist/css/pdf.css' : '../dist/css/paper.css';
       document.getElementsByTagName( 'head' )[0].appendChild( link );
     </script>
   </head>
@@ -128,7 +125,6 @@
         <section data-markdown>
           <script type='text/template'>
             <img src="http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=http%3A%2F%2Fevents.redbrick.dcu.ie%2Fintro%2F&qzone=1&margin=0&size=400x400&ecc=L" alt="qr code" />
-
             [events.redbrick.dcu.ie/intro](http://events.redbrick.dcu.ie/intro)
           </script>
         </section>
@@ -187,19 +183,19 @@
         </section>
       </div>
     </div>
-    <script src="../node_modules/reveal.js/js/reveal.js"></script>
-    <script src="../node_modules/reveal.js/lib/js/head.min.js"></script>
+    <script src="../dist/js/reveal.js"></script>
+    <script src="../dist/js/head.min.js"></script>
     <script>
       Reveal.initialize({
-        controls: false,
+        controls: true,
         mouseWheel: true,
         dependencies: [
-          { src: '../node_modules/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: '../node_modules/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: '../node_modules/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: '../node_modules/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-          { src: '../node_modules/reveal.js/plugin/zoom-js/zoom.js', async: true },
-          { src: '../node_modules/reveal.js/plugin/notes/notes.js', async: true }
+          { src: '../dist/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../dist/js//marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../dist/js/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: '../dist/js/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: '../dist/js/zoom.js', async: true },
+          { src: '../dist/js/notes.js', async: true }
         ]
       });
     </script>
