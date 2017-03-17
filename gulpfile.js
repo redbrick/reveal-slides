@@ -28,6 +28,7 @@ gulp.task('copy-js', () => {
     './node_modules/reveal.js/lib/js/classList.js',
     './node_modules/reveal.js/plugin/notes/notes.js',
     './node_modules/reveal.js/plugin/notes/notes.html',
+    './node_modules/reveal.js/plugin/print-pdf/print-pdf.js',
     './node_modules/reveal.js/plugin/zoom-js/zoom.js',
     './node_modules/reveal.js/plugin/highlight/highlight.js',
     './node_modules/reveal.js/plugin/markdown/markdown.js',
