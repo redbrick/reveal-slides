@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp",
+    "start": "gulp serve",
     "postinstall": "gulp"
   },
   "repository": {
@@ -27,5 +28,8 @@
     "gulp": "^3.9.1",
     "gulp-sass": "^2.3.2",
     "reveal.js": "^3.3.0"
+  },
+  "dependencies": {
+    "gulp-connect": "^5.0.0"
   }
 }
