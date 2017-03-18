@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp",
     "start": "gulp serve",
-    "postinstall": "gulp"
+    "postinstall": "gulp",
+    "lint": "eslint .",
+    "fix": "eslint . --fix"
   },
   "repository": {
     "type": "git",
@@ -25,11 +27,27 @@
   },
   "homepage": "https://github.com/redbrick/reveal-slides#readme",
   "devDependencies": {
+    "babel-cli": "6.23.0",
+    "babel-core": "6.23.1",
+    "babel-eslint": "7.1.1",
+    "babel-plugin-add-module-exports": "0.2.1",
+    "babel-plugin-es6-promise": "1.1.1",
+    "babel-plugin-syntax-async-functions": "6.13.0",
+    "babel-plugin-transform-async-to-generator": "6.22.0",
+    "babel-plugin-transform-object-assign": "6.22.0",
+    "babel-preset-es2015": "6.22.0",
+    "eslint": "3.16.1",
+    "eslint-config-standard": "6.2.1",
+    "eslint-plugin-promise": "3.5.0",
+    "eslint-plugin-standard": "2.1.0",
     "gulp": "^3.9.1",
     "gulp-sass": "^2.3.2",
     "reveal.js": "^3.3.0"
   },
   "dependencies": {
-    "gulp-connect": "^5.0.0"
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-minify": "^0.0.15"
   }
 }
