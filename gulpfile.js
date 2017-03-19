@@ -46,8 +46,6 @@ gulp.task('compress', () => gulp
 
 gulp.task('serve', ['default'], () => {
   connect.server({
-    port      : 8000,
-    root      : '.',
     livereload: true,
   });
 });
