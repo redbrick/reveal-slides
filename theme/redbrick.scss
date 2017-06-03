@@ -1,5 +1,4 @@
 // Default mixins and settings -----------------
-@import "../node_modules/reveal.js/css/reveal.scss";
 @import "../node_modules/reveal.js/css/theme/template/mixins";
 @import "../node_modules/reveal.js/css/theme/template/settings";
 // ---------------------------------------------
@@ -8,7 +7,7 @@
 $backgroundColor: #fff;
 // Background generator
 @mixin bodyBackground() {
-    background: url(../images/redbrick.png) bottom 32px left 32px/256px no-repeat, linear-gradient(to bottom, #f0ebe7 20px, #f0ebe7 100%);
+  background: url(https://www.redbrick.dcu.ie/assets/images/logo.png) bottom 32px left 32px/256px no-repeat, linear-gradient(to bottom, #f0ebe7 20px, #f0ebe7 100%);
 }
 
 $mainColor: #000;
@@ -37,16 +36,19 @@ section.has-dark-background {
 }
 
 body::after {
-    color: #000;
-    content: attr(data-bg-text);
-    display: block;
-    font-size: 12px;
-    line-height: 1;
-    position: absolute;
-    bottom: 16px;
-    right: 8px;
+  color: #000;
+  content: attr(data-bg-text);
+  display: block;
+  font-size: 12px;
+  line-height: 1;
+  position: absolute;
+  bottom: 16px;
+  right: 8px;
 }
 
+.reveal sup {
+  font-size: 60%;
+}
 // Theme template ------------------------------
 @import "../node_modules/reveal.js/css/theme/template/theme";
 @import "../node_modules/reveal.js/lib/css/zenburn";

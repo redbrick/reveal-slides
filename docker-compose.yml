@@ -1,26 +1,8 @@
 version: "3"
-
 services:
-  install:
+  slides:
     image: node:boron
-    container_name: slides-install
-    command: npm install
-    working_dir: /usr/src/app
-    volumes:
-      -  $PWD:/usr/src/app
-
-  build-slides:
-    image: node:boron
-    container_name: slides-build
-    command: npm run build
-    working_dir: /usr/src/app
-    volumes:
-      -  $PWD:/usr/src/app
-
-  server:
-    image: node:boron
-    container_name: slides-server
-    command: npm start
+    command: yarn start
     working_dir: /usr/src/app
     tty: true
     ports:
