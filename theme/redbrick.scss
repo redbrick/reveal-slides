@@ -1,17 +1,27 @@
 // Default mixins and settings -----------------
-@import "../node_modules/reveal.js/css/theme/template/mixins";
-@import "../node_modules/reveal.js/css/theme/template/settings";
+@import '../node_modules/reveal.js/css/theme/template/mixins';
+@import '../node_modules/reveal.js/css/theme/template/settings';
 // ---------------------------------------------
 
 // Override theme settings (see ../template/settings.scss)
-$backgroundColor: #fff;
+$rb-white: #fff;
+$rb-black: #000;
+$rb-blue: #0093d5;
+$rb-grey: #f0ebe7;
+$rb-grey-light: #f0ebe7;
+$backgroundColor: $rb-white;
+
 // Background generator
-@mixin bodyBackground() {
-  background: url(https://www.redbrick.dcu.ie/assets/images/logo.png) bottom 32px left 32px/256px no-repeat, linear-gradient(to bottom, #f0ebe7 20px, #f0ebe7 100%);
+.reveal {
+  background: url('https://www.redbrick.dcu.ie/assets/images/logo.png') bottom 32px left 32px/256px no-repeat, linear-gradient(to bottom, $rb-grey-light 20px, $rb-grey 100%);
+
+  sup {
+    font-size: 60%;
+  }
 }
 
-$mainColor: #000;
-$headingColor: #000;
+$mainColor: $rb-black;
+$headingColor: $rb-black;
 
 $mainFontSize: 38px;
 $mainFont: 'myriad-pro', Helvetica, sans-serif;
@@ -20,36 +30,43 @@ $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: uppercase;
 $headingFontWeight: 600;
-$linkColor: #0093D5;
-$linkColorHover: lighten( $linkColor, 15% );
-$selectionBackgroundColor: lighten( $linkColor, 25% );
+$linkColor: $rb-blue;
+$linkColorHover: lighten($linkColor, 15%);
+$selectionBackgroundColor: lighten($linkColor, 25%);
 
 $heading1Size: 2.5em;
 $heading2Size: 1.6em;
 $heading3Size: 1.3em;
-$heading4Size: 1.0em;
+$heading4Size: 1em;
 
-section.has-dark-background {
-  &, h1, h2, h3, h4, h5, h6 {
-    color: #fff;
+section {
+  .as-dark-background {
+    &,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $rb-white;
+    }
   }
 }
 
-body::after {
-  color: #000;
-  content: attr(data-bg-text);
-  display: block;
-  font-size: 12px;
-  line-height: 1;
-  position: absolute;
-  bottom: 16px;
-  right: 8px;
+body {
+  &::after {
+    bottom: 16px;
+    color: $rb-black;
+    content: attr(data-bg-text);
+    display: block;
+    font-size: 12px;
+    line-height: 1;
+    position: absolute;
+    right: 8px;
+  }
 }
 
-.reveal sup {
-  font-size: 60%;
-}
 // Theme template ------------------------------
-@import "../node_modules/reveal.js/css/theme/template/theme";
-@import "../node_modules/reveal.js/lib/css/zenburn";
+@import '../node_modules/reveal.js/css/theme/template/theme';
+@import '../node_modules/reveal.js/lib/css/zenburn';
 // ---------------------------------------------
