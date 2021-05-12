@@ -2521,9 +2521,9 @@ restore-cursor@^2.0.0:
     onetime "^2.0.0"
     signal-exit "^3.0.2"
 
-reveal.js@^3.3.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/reveal.js/-/reveal.js-3.5.0.tgz#95545949ad682636acecfdaea05cf0ca892d442d"
+reveal.js@^3.9.2:
+  version "3.9.2"
+  resolved "https://registry.yarnpkg.com/reveal.js/-/reveal.js-3.9.2.tgz#7f63d3dfec338b6c313dcabdf006e8cf80e0b358"
 
 rimraf@2:
   version "2.7.1"
